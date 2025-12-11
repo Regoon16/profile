@@ -68,11 +68,11 @@ export default function Hero() {
 
       {/* RIGHT SIDE (Doctor Image) */}
       <div className="relative mt-12 md:mt-0">
-        <div className="absolute w-72 h-72 bg-teal-300 rounded-full -z-10 top-10 right-10"></div>
+        <div className="absolute w-72 h-72 bg-teal-300 rounded-full -z-10 top-10  right-10"></div>
         <img
           src="https://i.postimg.cc/LXzSyrZw/zurag.jpg"
           alt="student"
-          className="h-[300px] object-cover"
+          className="h-[300px] object-cover w-64 h-auto rounded-xl border-4 border-gray-300"
         />
       </div>
 
