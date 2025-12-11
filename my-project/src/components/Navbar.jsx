@@ -1,11 +1,11 @@
 export default function Navbar() {
   return (
-    <nav className="w-full flex justify-between items-center py-6 px-10 bg-white">
+    <nav className="w-full flex justify-between items-center py-4 px-10 bg-white">
       <div className="flex items-center gap-2">
         <img
-          src="https://i.ibb.co/9W1q0Vt/logo.png"
+          src="https://i.postimg.cc/c1n9n7Lf/IMG-0003.jpg"
           alt="logo"
-          className="h-10"
+          className="h-20"
         />
         <p className="text-xl font-semibold text-gray-700">Гэвааноров</p>
       </div>

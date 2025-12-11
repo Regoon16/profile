@@ -4,46 +4,65 @@ export default function Hero() {
       
       {/* LEFT SIDE */}
       <div className="max-w-xl">
-        <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
-          hsdbahvdavdad <br /> djahdhgsvdhgavdhsavd <br />
-          jhvdgfacdgadhvadvas
+        <h1 className="text-4xl font-extrabold leading-tight text-gray-800">
+        Би одоогоор монгол коосэн сургуульд сурч байгаа <br /> 4-5 ангид сурдаг <br />
+          IT мэргэжилээр суралцаж яваа жирийнл нэгэн хүүхэд
         </h1>
 
         <div className="mt-10 flex flex-col gap-6">
           {/* Feature Row */}
           <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl">⏱️</span>
+            <span className="text-teal-600 text-3xl">🚘</span>
             <div>
-              <h3 className="font-bold">Fast</h3>
+              <h3 className="font-bold">Машин жолоодох</h3>
               <p className="text-gray-500 text-sm">
-                Urgent reports available within a few hours
+                 Сайн жолоодоч чаддаг.
               </p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl">🎯</span>
+            <span className="text-teal-600 text-3xl">🛌</span>
             <div>
-              <h3 className="font-bold">Accurate</h3>
+              <h3 className="font-bold">Унтах</h3>
               <p className="text-gray-500 text-sm">
-                Latest techniques and guidelines customised to YOU
+                Сайн унтаж чадна хэтэрхий их унтдаг
+                
               </p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl">🚗</span>
+            <span className="text-teal-600 text-3xl">🎹</span>
             <div>
-              <h3 className="font-bold">Easy Parking</h3>
+              <h3 className="font-bold">Хөгжим</h3>
               <p className="text-gray-500 text-sm">
-                Right outside our front door
+                Төгөлдөр хуур дажгүй тоглож чадна
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <span className="text-teal-600 text-3xl">🤳 🍱</span>
+            <div>
+              <h3 className="font-bold">Хобби</h3>
+              <p className="text-gray-500 text-sm">
+                 Зураг дарах,хоол хийх,ууланд алхах,дугуй унах хоббитэй
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <span className="text-teal-600 text-3xl"> 👪 </span>
+            <div>
+              <h3 className="font-bold">Гэр бүл</h3>
+              <p className="text-gray-500 text-sm">
+                 Аав,ээж,ах,4 дүүгийн хамт 8лаа байдаг өнөр бүл билээ🥰.
               </p>
             </div>
           </div>
         </div>
 
         <button className="mt-10 bg-teal-600 text-white py-3 px-8 rounded-lg text-lg hover:bg-teal-700 transition">
-          Book an Appointment
+          Анхаарал хандуулсанд баярлалаа😉.
         </button>
       </div>
 
