@@ -72,7 +72,7 @@ export default function Hero() {
         <img
           src="https://i.postimg.cc/LXzSyrZw/zurag.jpg"
           alt="student"
-          className="h-[380px] object-cover"
+          className="h-[300px] object-cover"
         />
       </div>
 
