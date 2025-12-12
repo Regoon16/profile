@@ -7,17 +7,15 @@ export default function Navbar() {
           alt="logo"
           className="h-20"
         />
-        <p className="text-xl font-semibold text-gray-700">Гэвааноров</p>
+        <p className="text-xl font-semibold text-gray-700">Erdenetugsd</p>
       </div>
 
       <div className="hidden md:flex items-center gap-8 text-gray-600">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Bookings</a>
+
       </div>
 
       <button className="border border-teal-500 py-2 px-5 rounded-lg text-teal-600 hover:bg-teal-50">
-        Hello
+        unjiiii2
       </button>
     </nav>
   );

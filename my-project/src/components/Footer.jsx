@@ -1,14 +1,14 @@
 import React from "react";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
     <footer style={styles.footer}>
-      <p>Миний сошиал хаяг🧑‍💻</p>
+      <p>chiniii social hayguud</p>
 
       <div style={styles.icons}>
         <a
-          href="https://instagram.com/_g_e_v_a_a_"
+          href="https://www.instagram.com/e.erdenetugs"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.iconLink}
@@ -17,12 +17,21 @@ function Footer() {
         </a>
 
         <a
-          href="https://facebook.com/gevaa.gevaa.7"
+          href="https://www.facebook.com/batuka.batka.10"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.iconLink}
         >
           <FaFacebook size={28} />
+        </a>
+
+        <a
+          href="https://www.youtube.com/watch?v=jEqbB9o4zYo&list=PLnB80L7lHSR3P2Ofv-DXvcD1B7Oi1DxXD"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.iconLink}
+        >
+          <FaYoutube size={28} />
         </a>
       </div>
     </footer>
@@ -48,3 +57,4 @@ const styles = {
 };
 
 export default Footer;
+

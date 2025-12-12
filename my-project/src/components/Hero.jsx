@@ -5,57 +5,39 @@ export default function Hero() {
       {/* LEFT SIDE */}
       <div className="max-w-xl">
         <h1 className="text-4xl font-extrabold leading-tight text-gray-800">
-        Би одоогоор монгол коосэн сургуульд сурч байгаа <br /> 4-5 ангид сурдаг <br />
-          IT мэргэжилээр суралцаж яваа жирийнл нэгэн хүүхэд
+        huuurhun tsairailag nzdaab tursun <br /> udriin mend hurgii hairtai shuu onjig mini <br />
+          hamtdaa zunduu olon dursamj buteltsend bayrlalaaa❤️❤️❤️❤️ ter dood talin youtube link daraad duugaa sonsoorei haahahaha
         </h1>
 
         <div className="mt-10 flex flex-col gap-6">
           {/* Feature Row */}
           <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl">🚘</span>
+            <span className="text-teal-600 text-3xl">🥰</span>
             <div>
-              <h3 className="font-bold">Машин жолоодох</h3>
+              <h3 className="font-bold">Найз минь, чи байхгүй бол уйтгартай шүү 😄</h3>
               <p className="text-gray-500 text-sm">
-                 Сайн жолоодоч чаддаг.
+                 
               </p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl">🛌</span>
+            <span className="text-teal-600 text-3xl">😃</span>
             <div>
-              <h3 className="font-bold">Унтах</h3>
+              <h3 className="font-bold">Чи байснаараа л хангалттай гоё хүн. Яг иймээрээ байгаарай 🤍</h3>
               <p className="text-gray-500 text-sm">
-                Сайн унтаж чадна хэтэрхий их унтдаг
+              
                 
               </p>
             </div>
           </div>
 
           <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl">🎹</span>
+            <span className="text-teal-600 text-3xl"> 😎 </span>
             <div>
-              <h3 className="font-bold">Хөгжим</h3>
+              <h3 className="font-bold">Алдаа бол төгсгөл биш, харин туршлага mundag shuu llraa</h3>
               <p className="text-gray-500 text-sm">
-                Төгөлдөр хуур дажгүй тоглож чадна
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl">🤳 🍱</span>
-            <div>
-              <h3 className="font-bold">Хобби</h3>
-              <p className="text-gray-500 text-sm">
-                 Зураг дарах,хоол хийх,ууланд алхах,дугуй унах хоббитэй
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <span className="text-teal-600 text-3xl"> 👪 </span>
-            <div>
-              <h3 className="font-bold">Гэр бүл</h3>
-              <p className="text-gray-500 text-sm">
-                 Аав,ээж,ах,4 дүүгийн хамт 8лаа байдаг өнөр бүл билээ🥰.
+                
               </p>
             </div>
           </div>
@@ -70,7 +52,7 @@ export default function Hero() {
       <div className="relative mt-12 md:mt-0">
         <div className="absolute w-72 h-72 bg-teal-300 rounded-full -z-10 top-10  right-10"></div>
         <img
-          src="https://i.postimg.cc/LXzSyrZw/zurag.jpg"
+          src="https://i.postimg.cc/65j6DJnh/Screenshot-2025-12-13-at-04-07-35.png"
           alt="student"
           className="h-[300px] object-cover w-64 h-auto rounded-xl border-4 border-gray-300"
         />
