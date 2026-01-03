@@ -24,15 +24,6 @@ function Footer() {
         >
           <FaFacebook size={28} />
         </a>
-
-        <a
-          href="https://www.youtube.com/watch?v=jEqbB9o4zYo&list=PLnB80L7lHSR3P2Ofv-DXvcD1B7Oi1DxXD"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={styles.iconLink}
-        >
-          <FaYoutube size={28} />
-        </a>
       </div>
     </footer>
   );
