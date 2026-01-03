@@ -8,13 +8,13 @@ function SiteFooter() {
         
         {/* Name */}
         <h2 className="text-xl font-semibold tracking-wide">
-          Erdenetugs • Portfolio
+          Гэвааноров • Portfolio
         </h2>
 
         {/* Social icons */}
         <div className="flex gap-6">
           <a
-            href="https://www.instagram.com/e.erdenetugs"
+            href="https://www.instagram.com/_g_e_v_a_a_/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-500 transition transform hover:scale-110"
@@ -23,7 +23,7 @@ function SiteFooter() {
           </a>
 
           <a
-            href="https://www.facebook.com/batuka.batka.10"
+            href="https://www.facebook.com/gevaa.gevaa.7"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition transform hover:scale-110"
@@ -31,14 +31,7 @@ function SiteFooter() {
             <FaFacebook size={26} />
           </a>
 
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-500 transition transform hover:scale-110"
-          >
-            <FaYoutube size={26} />
-          </a>
+        
         </div>
 
         {/* Divider */}
@@ -46,7 +39,7 @@ function SiteFooter() {
 
         {/* Copyright */}
         <p className="text-sm text-gray-400">
-          © {new Date().getFullYear()} Erdenetugs. All rights reserved.
+          © {new Date().getFullYear()} Гэвааноров. Бүх эрх хуулиар хамгаалагдсан.
         </p>
       </div>
     </footer>
