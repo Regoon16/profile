@@ -1,193 +1,131 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import React, { useState } from "react";
+import { useState } from "react";
 
 /* ================= TIC TAC TOE ================= */
 
-const TicTacToe = () => {
+function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null));
-  const [isX, setIsX] = useState(true);
+  const [xTurn, setXTurn] = useState(true);
 
   const winner = calculateWinner(board);
 
-  const handlePress = (index) => {
-    if (board[index] || winner) return;
+  const handleClick = (i) => {
+    if (board[i] || winner) return;
     const newBoard = [...board];
-    newBoard[index] = isX ? "X" : "O";
+    newBoard[i] = xTurn ? "X" : "O";
     setBoard(newBoard);
-    setIsX(!isX);
+    setXTurn(!xTurn);
   };
 
   const reset = () => {
     setBoard(Array(9).fill(null));
-    setIsX(true);
+    setXTurn(true);
   };
 
   return (
-    <View style={styles.card}>
-      <Text style={styles.title}>🎮 Tic Tac Toe</Text>
+    <div className="bg-slate-800 p-6 rounded-2xl text-center">
+      <h2 className="text-2xl text-white mb-4">🎮 Tic Tac Toe</h2>
 
-      <View style={styles.grid}>
-        {board.map((item, index) => (
-          <TouchableOpacity
-            key={index}
-            style={styles.cell}
-            onPress={() => handlePress(index)}
+      <div className="grid grid-cols-3 gap-2 w-60 mx-auto">
+        {board.map((item, i) => (
+          <button
+            key={i}
+            onClick={() => handleClick(i)}
+            className="w-20 h-20 bg-slate-700 text-3xl text-white font-bold rounded-lg"
           >
-            <Text style={styles.cellText}>{item}</Text>
-          </TouchableOpacity>
+            {item}
+          </button>
         ))}
-      </View>
+      </div>
 
-      <Text style={styles.info}>
-        {winner ? `🎉 Winner: ${winner}` : `Turn: ${isX ? "X" : "O"}`}
-      </Text>
+      <p className="text-white mt-4">
+        {winner ? `🎉 Winner: ${winner}` : `Turn: ${xTurn ? "X" : "O"}`}
+      </p>
 
-      <TouchableOpacity onPress={reset} style={styles.btn}>
-        <Text style={styles.btnText}>Restart</Text>
-      </TouchableOpacity>
-    </View>
+      <button
+        onClick={reset}
+        className="mt-4 bg-blue-600 px-5 py-2 rounded-xl text-white hover:bg-blue-700"
+      >
+        Restart
+      </button>
+    </div>
   );
-};
+}
 
-/* ================= SHAGAI ================= */
+/* ================= SHAGAI GAME ================= */
 
-const Shagai = () => {
-  const shagaiArray = [
-    require("../assets/shagai1.png"),
-    require("../assets/shagai2.png"),
-    require("../assets/shagai3.png"),
-    require("../assets/shagai4.png"),
+function ShagaiGame() {
+  const images = [
+    "../assets/shagai1.png",
+    "../assets/shagai2.png",
+    "../assets/shagai3.png",
+    "../assets/shagai4.png",
   ];
 
-  const [randomArray, setRandomArray] = useState([0, 1, 2, 3]);
+  const [result, setResult] = useState([0, 1, 2, 3]);
 
   const hayh = () => {
-    const temp = [];
-    for (let i = 0; i < 4; i++) {
-      temp.push(Math.floor(Math.random() * 4));
-    }
-    setRandomArray(temp);
+    setResult(
+      Array.from({ length: 4 }, () => Math.floor(Math.random() * 4))
+    );
   };
 
   return (
-    <View style={styles.card}>
-      <Text style={styles.title}>🐑 Шагай тоглоом</Text>
+    <div className="bg-slate-800 p-6 rounded-2xl text-center">
+      <h2 className="text-2xl text-white mb-4">🐑 Шагай тоглоом</h2>
 
-      <View style={styles.shagaiBox}>
-        {randomArray.map((i, index) => (
-          <Image
-            key={index}
-            source={shagaiArray[i]}
-            style={styles.shagaiImg}
+      <div className="grid grid-cols-2 gap-4 mb-4">
+        {result.map((i, idx) => (
+          <img
+            key={idx}
+            src={images[i]}
+            alt="shagai"
+            className="w-32 h-32 mx-auto"
           />
         ))}
-      </View>
+      </div>
 
-      <TouchableOpacity onPress={hayh} style={styles.btn}>
-        <Text style={styles.btnText}>Шагай хаях</Text>
-      </TouchableOpacity>
-    </View>
+      <button
+        onClick={hayh}
+        className="bg-green-600 px-6 py-2 rounded-xl text-white hover:bg-green-700"
+      >
+        Шагай хаях
+      </button>
+    </div>
   );
-};
+}
 
-/* ================= MAIN ================= */
+/* ================= MAIN PROJECTS ================= */
 
-const Projects = () => {
+export default function Projects() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.mainTitle}>📂 Projects</Text>
-      <TicTacToe />
-      <Shagai />
-    </View>
+    <section className="min-h-screen bg-slate-900 p-10">
+      <h1 className="text-4xl font-bold text-center text-white mb-10">
+        🚀 Mini Game Projects
+      </h1>
+
+      <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <TicTacToe />
+        <ShagaiGame />
+      </div>
+    </section>
   );
-};
+}
 
-export default Projects;
-
-/* ================= STYLES ================= */
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#0f172a",
-    padding: 20,
-  },
-  mainTitle: {
-    fontSize: 28,
-    color: "white",
-    textAlign: "center",
-    marginBottom: 20,
-    fontWeight: "bold",
-  },
-  card: {
-    backgroundColor: "#1e293b",
-    borderRadius: 20,
-    padding: 20,
-    marginBottom: 25,
-  },
-  title: {
-    color: "white",
-    fontSize: 22,
-    textAlign: "center",
-    marginBottom: 15,
-    fontWeight: "600",
-  },
-  grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    width: 240,
-    alignSelf: "center",
-  },
-  cell: {
-    width: 80,
-    height: 80,
-    borderWidth: 1,
-    borderColor: "#334155",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  cellText: {
-    fontSize: 32,
-    color: "white",
-    fontWeight: "bold",
-  },
-  info: {
-    color: "#e5e7eb",
-    textAlign: "center",
-    marginVertical: 10,
-  },
-  btn: {
-    backgroundColor: "#2563eb",
-    padding: 12,
-    borderRadius: 12,
-    marginTop: 10,
-  },
-  btnText: {
-    color: "white",
-    textAlign: "center",
-    fontSize: 16,
-    fontWeight: "600",
-  },
-  shagaiBox: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: 10,
-    marginBottom: 15,
-  },
-  shagaiImg: {
-    width: 120,
-    height: 120,
-  },
-});
+/* ================= HELPER ================= */
 
 function calculateWinner(board) {
   const lines = [
-    [0,1,2],[3,4,5],[6,7,8],
-    [0,3,6],[1,4,7],[2,5,8],
-    [0,4,8],[2,4,6],
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
   ];
-  for (let [a,b,c] of lines) {
+
+  for (let [a, b, c] of lines) {
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       return board[a];
     }
