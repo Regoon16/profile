@@ -55,10 +55,10 @@ function TicTacToe() {
 
 function ShagaiGame() {
   const images = [
-    "../assets/shagai1.png",
-    "../assets/shagai2.png",
-    "../assets/shagai3.png",
-    "../assets/shagai4.png",
+    "/shagai/shagai1.png",
+    "/shagai/shagai2.png",
+    "/shagai/shagai3.png",
+    "/shagai/shagai4.png",
   ];
 
   const [result, setResult] = useState([0, 1, 2, 3]);
