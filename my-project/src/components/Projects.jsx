@@ -53,10 +53,10 @@ const TicTacToe = () => {
 
 const Shagai = () => {
   const shagaiArray = [
-    { img: require("@/assets/shagai1.png") },
-    { img: require("@/assets/shagai2.png") },
-    { img: require("@/assets/shagai3.png") },
-    { img: require("@/assets/shagai4.png") },
+    { img: require("@//assets/shagai1.png") },
+    { img: require("@//assets/shagai2.png") },
+    { img: require("@//assets/shagai3.png") },
+    { img: require("@//assets/shagai4.png") },
   ];
 
   const [randomArray, setRandomArray] = useState([0, 1, 2, 3]);
