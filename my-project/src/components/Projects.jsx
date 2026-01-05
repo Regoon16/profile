@@ -3,27 +3,52 @@ import { useState } from "react";
 function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isX, setIsX] = useState(true);
+  const [score, setScore] = useState({ X: 0, O: 0 });
 
   const winner = calculateWinner(board);
+  const isDraw = board.every(Boolean) && !winner;
 
   function handleClick(i) {
     if (board[i] || winner) return;
+
     const newBoard = [...board];
     newBoard[i] = isX ? "X" : "O";
     setBoard(newBoard);
     setIsX(!isX);
   }
 
-  function resetGame() {
+  function resetBoard() {
     setBoard(Array(9).fill(null));
     setIsX(true);
   }
 
+  function resetGame() {
+    resetBoard();
+    setScore({ X: 0, O: 0 });
+  }
+
+  if (winner) {
+    setTimeout(() => {
+      setScore((prev) => ({
+        ...prev,
+        [winner]: prev[winner] + 1,
+      }));
+      resetBoard();
+    }, 800);
+  }
+
   return (
     <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-3xl shadow-2xl">
-      <h3 className="text-2xl font-bold text-center mb-6 text-white">
+
+      <h3 className="text-2xl font-bold text-center mb-6">
         🎮 Tic Tac Toe
       </h3>
+
+      {/* Score */}
+      <div className="flex justify-center gap-8 mb-6 text-lg">
+        <span className="text-blue-400">X: {score.X}</span>
+        <span className="text-pink-400">O: {score.O}</span>
+      </div>
 
       {/* Board */}
       <div className="grid grid-cols-3 gap-3 w-60 mx-auto">
@@ -36,9 +61,9 @@ function TicTacToe() {
               transition duration-200
               ${
                 cell === "X"
-                  ? "text-blue-400"
+                  ? "text-blue-400 shadow-blue-500/50 shadow-lg"
                   : cell === "O"
-                  ? "text-pink-400"
+                  ? "text-pink-400 shadow-pink-500/50 shadow-lg"
                   : "text-gray-400"
               }
               bg-black hover:bg-slate-700`}
@@ -50,11 +75,17 @@ function TicTacToe() {
 
       {/* Status */}
       <p className="text-center mt-6 text-lg">
-        {winner ? (
-          <span className="text-green-400 font-semibold">
-            🎉 Winner: {winner}
+        {winner && (
+          <span className="text-green-400 font-semibold animate-pulse">
+            🎉 {winner} wins!
           </span>
-        ) : (
+        )}
+        {isDraw && (
+          <span className="text-yellow-400 font-semibold">
+            🤝 Draw!
+          </span>
+        )}
+        {!winner && !isDraw && (
           <span className="text-gray-300">
             Next turn:{" "}
             <span className="font-bold text-white">
@@ -64,15 +95,21 @@ function TicTacToe() {
         )}
       </p>
 
-      {/* Reset */}
-      <button
-        onClick={resetGame}
-        className="mt-6 block mx-auto px-6 py-2 rounded-full
-                   bg-blue-600 hover:bg-blue-700
-                   transition text-white font-semibold"
-      >
-        Restart Game
-      </button>
+      {/* Controls */}
+      <div className="flex justify-center gap-4 mt-6">
+        <button
+          onClick={resetBoard}
+          className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition"
+        >
+          Restart Round
+        </button>
+        <button
+          onClick={resetGame}
+          className="px-4 py-2 rounded-full bg-gray-600 hover:bg-gray-700 transition"
+        >
+          Reset Score
+        </button>
+      </div>
     </div>
   );
 }
@@ -91,29 +128,4 @@ function calculateWinner(board) {
   return null;
 }
 
-export default function Projects() {
-  return (
-    <section id="projects" className="py-24 bg-black text-white">
-      <h2 className="text-4xl font-extrabold text-center mb-14">
-        Projects & Games
-      </h2>
-
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6">
-        
-        {/* TGLOOOM */}
-        <div className="bg-slate-900 p-8 rounded-3xl shadow-xl">
-          <h3 className="text-2xl font-bold mb-4">
-            🕹️ TGLOOOM Game
-          </h3>
-          <p className="text-gray-400">
-            JavaScript логик, user interaction дээр суурилсан mini game.
-            (дараагийн шатанд playable болгоно)
-          </p>
-        </div>
-
-        {/* REAL GAME */}
-        <TicTacToe />
-      </div>
-    </section>
-  );
-}
+export default TicTacToe;
