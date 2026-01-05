@@ -39,7 +39,7 @@ function SiteFooter() {
 
         {/* Copyright */}
         <p className="text-sm text-gray-400">
-          © {new Date().getFullYear()} Гэвааноров. Бүх эрх хуулиар хамгаалагдсан.
+          © {new Date().getFullYear()} Гэвааноров. Бүх эрх хуулиар хамгаалагдагүй.
         </p>
       </div>
     </footer>

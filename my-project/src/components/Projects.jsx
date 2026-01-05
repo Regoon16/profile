@@ -23,7 +23,7 @@ function TicTacToe() {
 
   return (
     <div className="bg-slate-800 p-6 rounded-2xl text-center">
-      <h2 className="text-2xl text-white mb-4">🎮 Tic Tac Toe</h2>
+      <h2 className="text-2xl text-white mb-4">🎮 Tic Tac</h2>
 
       <div className="grid grid-cols-3 gap-2 w-60 mx-auto">
         {board.map((item, i) => (
@@ -38,20 +38,19 @@ function TicTacToe() {
       </div>
 
       <p className="text-white mt-4">
-        {winner ? `🎉 Winner: ${winner}` : `Turn: ${xTurn ? "X" : "O"}`}
+        {winner ? `🎉 Ялагч: ${winner}` : `Turn: ${xTurn ? "X" : "O"}`}
       </p>
 
       <button
         onClick={reset}
         className="mt-4 bg-blue-600 px-5 py-2 rounded-xl text-white hover:bg-blue-700"
       >
-        Restart
+        Дахин эхлүүлэх
       </button>
     </div>
   );
 }
 
-/* ================= SHAGAI GAME ================= */
 
 function ShagaiGame() {
   const images = [
@@ -100,7 +99,7 @@ export default function Projects() {
   return (
     <section className="min-h-screen bg-slate-900 p-10">
       <h1 className="text-4xl font-bold text-center text-white mb-10">
-        🚀 Mini Game Projects
+        🚀 Миний тоглоомын төслүүд 🚀
       </h1>
 
       <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">

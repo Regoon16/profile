@@ -9,7 +9,7 @@ export default function Contact() {
           <textarea required placeholder="Message" className="w-full p-3 rounded bg-slate-800"></textarea>
   
           <button className="w-full py-3 bg-blue-600 rounded hover:bg-blue-700 transition">
-            Send
+          Илгээх
           </button>
         </form>
       </section>
