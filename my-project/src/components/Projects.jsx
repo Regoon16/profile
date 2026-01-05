@@ -17,7 +17,7 @@ function calculateWinner(board) {
   return null;
 }
 
-/* ============ TIC TAC TOE ============ */
+
 function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xTurn, setXTurn] = useState(true);
@@ -71,7 +71,7 @@ function TicTacToe() {
   );
 }
 
-/* ============ SHAGAI ============ */
+
 function Shagai() {
   const images = [
     "/shagai/shagai1.png",
@@ -110,12 +110,12 @@ function Shagai() {
   );
 }
 
-/* ============ PROJECTS ============ */
+
 export default function Projects() {
   return (
     <section id="projects" className="min-h-screen bg-slate-900 pt-28 px-10">
       <h1 className="text-4xl text-white text-center mb-8">
-        🕹 Миний тоглоомууд
+        🕹 Миний тоглоомууд 🕹
       </h1>
 
       <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
