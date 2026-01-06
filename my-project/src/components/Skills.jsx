@@ -18,23 +18,54 @@ import {
         </h2>
   
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <Skill icon={<FaReact />} name="React" />
-          <Skill icon={<FaJs />} name="JavaScript" />
-          <Skill icon={<SiTailwindcss />} name="Tailwind" />
-          <Skill icon={<FaHtml5 />} name="HTML" />
-          <Skill icon={<FaCss3Alt />} name="CSS" />
-          <Skill icon={<FaGitAlt />} name="Git" />
+          <Skill
+            icon={<FaReact />}
+            name="React"
+            link="https://react.dev"
+          />
+          <Skill
+            icon={<FaJs />}
+            name="JavaScript"
+            link="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          />
+          <Skill
+            icon={<SiTailwindcss />}
+            name="Tailwind"
+            link="https://tailwindcss.com"
+          />
+          <Skill
+            icon={<FaHtml5 />}
+            name="HTML"
+            link="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          />
+          <Skill
+            icon={<FaCss3Alt />}
+            name="CSS"
+            link="https://developer.mozilla.org/en-US/docs/Web/CSS"
+          />
+          <Skill
+            icon={<FaGitAlt />}
+            name="Git"
+            link="https://git-scm.com"
+          />
         </div>
       </section>
     );
   }
   
-  function Skill({ icon, name }) {
+  function Skill({ icon, name, link }) {
     return (
-      <div className="bg-slate-900 rounded-2xl p-6 flex flex-col items-center gap-3 hover:scale-105 transition">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-slate-900 rounded-2xl p-6 flex flex-col items-center gap-3
+                   hover:scale-105 hover:bg-slate-700 transition cursor-pointer"
+      >
         <div className="text-4xl text-blue-400">{icon}</div>
-        <p className="text-white">{name}</p>
-      </div>
+        <p className="text-white font-medium">{name}</p>
+        <span className="text-xs text-slate-400"></span>
+      </a>
     );
   }
   
