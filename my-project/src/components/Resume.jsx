@@ -5,7 +5,7 @@ export default function Resume() {
   
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
           <div className="bg-slate-900 p-6 rounded-xl">
-            <h3 className="font-semibold mb-4">Ур чадвар</h3>
+            <h3 className="font-semibold mb-4">🔥 Ур чадвар 🔥</h3>
             <ul className="text-gray-400 space-y-2">
               <li>✔ React / JSX</li>
               <li>✔ Tailwind CSS</li>
@@ -15,9 +15,12 @@ export default function Resume() {
           </div>
   
           <div className="bg-slate-900 p-6 rounded-xl">
-            <h3 className="font-semibold mb-4">Боловсрол</h3>
+            <h3 className="font-semibold mb-4">🎓 Боловсрол 🎓</h3>
             <p className="text-gray-400">
             Мэдээллийн технологийн оюутан - Вэб хөгжүүлэлт
+            </p>
+            <p className="text-gray-400">
+              Одоо монгол коосэнд компьютерын ангид сурдаг 🫶
             </p>
           </div>
         </div>
